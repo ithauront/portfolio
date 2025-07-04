@@ -1,13 +1,13 @@
-import { Button } from "./components/Button";
+import { NavBar } from "./components/NavBar";
+
+import "./main-styles/theme.css";
+import "./main-styles/styles.css";
 
 export function App() {
- 
   return (
-   
-      <div>
-       <p>Iuri Portfolio</p>
-       <Button label="Aperte aqui" />
-      </div>
-    
-  )
+    <div className="main-container">
+      <NavBar />
+      <p>Iuri Portfolio</p>
+    </div>
+  );
 }

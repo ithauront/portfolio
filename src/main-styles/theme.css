@@ -1,0 +1,39 @@
+  /* TODO: no fim do projeto ver o que não foi usado e descartar. */
+  :root {
+
+    --green-100: #d4fddf;
+    --green-300: #6ef58c;
+    --green-500: #1edf2d;
+    --green-700: #0b8c2f;
+
+
+
+    --gray-100: #131110;
+    --gray-200: #403937;
+    --gray-300: #574f4d;
+    --gray-400: #8d8686;
+    --gray-500: #d7d5d5;
+    --gray-600: #e6e5e5;
+    --gray-700: #ededed;
+    --gray-800: #f3f2f2;
+    --gray-900: #fafafa;
+
+    --white: #ffffff;
+    --black: #000000;
+
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+
+
+    --font-size-xsm: 0.5rem;
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-md: 1rem;
+    /* 16px */
+    --font-size-lg: 1.25rem;
+    /* 20px */
+    --font-size-xl: 1.5rem;
+    /* 24px */
+
+    --border-radius: 0.5rem;
+  }
