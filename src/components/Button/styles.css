@@ -1,20 +1,65 @@
-
-.container {
+.button-container-primary {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 2.5rem;
 
-  background-color: #1e90ff;
-  color: white;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--green-500);
+
   border: none;
   border-radius: 0.5rem;
-  font-size: 1rem;
+
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.container:hover {
-    background-color:rgb(107, 115, 126);
+.button-container-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
+
+  border: 1px solid var(--green-500);
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+.button-container-primary:hover {
+  background-color: var(--green-700);
+  box-shadow: 0 6px 40px rgba(0, 255, 150, 0.2);
+}
+
+.button-container-secondary:hover {
+  border: 1px solid var(--green-700);
+  box-shadow: 0 6px 40px rgba(0, 255, 150, 0.2);
+}
+
+.button-container-primary:hover .button-label {
+  color: var(--gray-700);
+}
+
+.button-container-secondary:hover .button-label {
+  color: var(--green-500);
+}
+
+.button-label-primary {
+  color: var(--gray-100);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-primary);
+  transition: color 0.3s;
+}
+
+.button-label-secondary {
+  color: var(--gray-700);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-primary);
+  transition: color 0.3s;
+}
