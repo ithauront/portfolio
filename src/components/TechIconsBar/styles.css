@@ -1,0 +1,23 @@
+.tech-icons-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tech-icons-container {
+    height: 50px;
+    width: 50px;
+    background-color: var(--green-500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tech-icon {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
