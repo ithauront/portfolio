@@ -4,9 +4,7 @@ import Logo from "../../assets/gengarlaxLogo-removebg-preview.png";
 import { Button } from "../Button";
 
 import "./styles.css";
-
 const NAVBAR_HEIGHT = -160;
-
 export function NavBar() {
   return (
     <div className="navbar-container">
