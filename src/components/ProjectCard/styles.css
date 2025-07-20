@@ -10,40 +10,8 @@
 }
 
 .projectCard-main {
-    position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-}
-
-.projectCard-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: opacity 0.8s ease;
-    opacity: 0;
-    z-index: 0;
-}
-
-.projectCard-slide.visible {
-    opacity: 1;
-    z-index: 1;
-}
-
-.projectCard-main p {
-    padding: 1.5rem 1rem;
-    font-size: 18px;
-    font-family: var(--font-primary);
-    font-weight: bold;
-    color: var(--gray-700);
-    line-height: 120%;
-    box-sizing: border-box;
-    overflow-y: auto;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-height: calc(100% - 5rem)
 }
 
 .projectCard-main img {
@@ -64,6 +32,8 @@
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
+    background-color: var(--green-700);
+    opacity: 90%;
 }
 
 .projectCard-footer {
@@ -73,7 +43,6 @@
     width: 100%;
     height: 3rem;
     background-color: var(--gray-200);
-    opacity: 0.7;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,17 +58,19 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
 }
 
-.projectCard-footer-button-deploy {
-    height: 2rem;
-    width: 7rem;
-    background-color: var(--green-700);
-    border-radius: 0.5rem;
+.projectCard-footer-oneButton-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.projectCard-footer-button-github {
+.projectCard-footer-button {
     height: 2rem;
     width: 7rem;
     border-radius: 0.5rem;
+
 }
