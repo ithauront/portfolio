@@ -1,0 +1,97 @@
+.projectDetails-container {
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.projectDetails-titleBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.projectDetails-title {
+    font-size: 3rem;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, var(--green-300), var(--green-700));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+
+}
+
+.projectDetails-category {
+    font-size: 2rem;
+    color: var(--gray-400);
+    font-family: var(--font-primary);
+}
+
+.projectDetails-imgAndTechContainer {
+    max-width: 100%;
+    max-height: 79vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectDetails-asideSessionTitle {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, var(--green-300), var(--green-700));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+    font-family: var(--font-primary);
+
+}
+
+.projectDetails-about {
+    font-size: 1rem;
+    color: var(--gray-500);
+    font-family: var(--font-secondary);
+    text-align: justify;
+}
+
+.projectDetails-techItem {
+    position: relative;
+    font-size: 1rem;
+    color: var(--gray-500);
+    font-family: var(--font-secondary);
+    padding-left: 1rem;
+}
+
+.projectDetails-techItem::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: var(--green-500);
+    border-radius: 50%;
+}
+
+.projectDetails-learnedItem {
+    position: relative;
+    font-size: 1rem;
+    color: var(--gray-500);
+    font-family: var(--font-secondary);
+    padding-left: 1rem;
+}
+
+.projectDetails-learnedItem::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: var(--green-500);
+    border-radius: 50%;
+}

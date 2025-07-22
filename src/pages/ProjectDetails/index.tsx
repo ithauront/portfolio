@@ -1,0 +1,161 @@
+import { useParams, useLocation } from "react-router-dom";
+
+import { Button } from "../../components/Button";
+import { projects, type Project } from "../Portfolio/utils";
+import "./styles.css";
+export function ProjectDetails() {
+  const { id } = useParams();
+  const location = useLocation();
+  const projectFromState = location.state as Project | undefined;
+
+  const project =
+    projectFromState || projects.find((item) => item.id === Number(id));
+
+  const openLink = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  if (!project) {
+    return (
+      <div className="projectDetails-container">
+        <p>Projeto não encontrado.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="projectDetails-container">
+      <div className="projectDetails-titleBox">
+        <h1 className="projectDetails-title">{project.name}</h1>
+        <h2 className="projectDetails-category">{project.category}</h2>
+      </div>
+      <div className="projectDetails-imgAndTechContainer">
+        <img
+          src={project.image}
+          alt={project.name}
+          style={{
+            width: "75%",
+          }}
+        />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1.5rem",
+            padding: "1rem",
+            flex: 1,
+          }}
+        >
+          <div>
+            <h3 className="projectDetails-asideSessionTitle">About</h3>
+            <p className="projectDetails-about">
+              {project.detailedDescription}
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+              gap: "0.5rem",
+            }}
+          >
+            <h3 className="projectDetails-asideSessionTitle">Tech Stack</h3>
+            <div
+              style={{
+                maxHeight: "20rem",
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                gap: "0.5rem",
+                flexWrap: "wrap",
+              }}
+            >
+              {project.techs.map((item: string) => {
+                return <p className="projectDetails-techItem">{item}</p>;
+              })}
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+              gap: "0.5rem",
+            }}
+          >
+            <h3 className="projectDetails-asideSessionTitle">What I Learned</h3>
+            <div
+              style={{
+                maxHeight: "20rem",
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                gap: "0.4rem",
+                flexWrap: "wrap",
+              }}
+            >
+              {project.learned.map((item: string) => {
+                return <p className="projectDetails-learnedItem">{item}</p>;
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          padding: "2rem 4rem",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <div
+          style={{
+            width: "7rem",
+            height: "2rem",
+          }}
+        >
+          <Button onClick={() => window.history.back()} label="Back" />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            gap: "8rem",
+            height: "2rem",
+          }}
+        >
+          <div
+            style={{
+              width: "7rem",
+            }}
+          >
+            <Button
+              label="Github"
+              variant="secondary"
+              onClick={() => openLink(project.githubLink)}
+            />
+          </div>
+          <div
+            style={{
+              width: "7rem",
+            }}
+          >
+            <Button
+              label={project.githubLinkBackEnd ? "Github Backend" : "Live Demo"}
+              onClick={() =>
+                openLink(project.githubLinkBackEnd || project.liveLink!)
+              }
+              variant="secondary"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
