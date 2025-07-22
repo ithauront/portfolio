@@ -78,7 +78,6 @@ const steps = [
 ];
 
 export function AnimatedTerminal() {
-  // TODO: quando rola para cima ele quebra saindo um pouco da caixa
   const [currentLine, setCurrentLine] = useState(0);
   const [printedLines, setPrintedLines] = useState<string[]>([]);
   const [isLooping, setIsLooping] = useState(false);
