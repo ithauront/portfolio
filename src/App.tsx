@@ -1,19 +1,14 @@
-import { NavBar } from "./components/NavBar";
-import "./main-styles/theme.css";
+import { Route, Routes } from "react-router-dom";
+
+import { MainLandingPage } from "./pages/MainLandingPage";
+import { ProjectDetails } from "./pages/ProjectDetails";
 import "./main-styles/styles.css";
-import { AboutMe } from "./pages/AboutMe";
-import { Contact } from "./pages/Contact";
-import { Home } from "./pages/Home";
-import { Portfolio } from "./pages/Portfolio";
 
 export function App() {
   return (
-    <div className="main-container">
-      <NavBar />
-      <Home />
-      <AboutMe />
-      <Portfolio />
-      <Contact />
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLandingPage />} />
+      <Route path="/project/:id" element={<ProjectDetails />} />
+    </Routes>
   );
 }
