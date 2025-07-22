@@ -6,6 +6,12 @@ import { Button } from "../Button";
 import "./styles.css";
 const NAVBAR_HEIGHT = -160;
 export function NavBar() {
+  function handleMailSend() {
+    const mailtoLink = document.createElement("a");
+    mailtoLink.href = "mailto:iurithauront@gmail.com";
+    mailtoLink.target = "_blank";
+    mailtoLink.click();
+  }
   return (
     <div className="navbar-container">
       <img src={Logo} alt="Logo" width={50} height={50} />
@@ -56,7 +62,7 @@ export function NavBar() {
         </Link>
       </div>
       <div className="navbar-button-container">
-        <Button label="Send e-mail" />
+        <Button label="Send e-mail" onClick={handleMailSend} />
       </div>
     </div>
   );
