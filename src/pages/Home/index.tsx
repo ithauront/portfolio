@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-scroll";
 
+import cv from "../../../public/cv/Iuri_Thauront- Développeur Web.pdf";
 import Photo from "../../assets/facePhoto.png";
 import Github from "../../assets/icons8-github-96.png";
 import Linkedin from "../../assets/icons8-linkedin-50.png";
@@ -10,7 +12,6 @@ import { Button } from "../../components/Button";
 import "./styles.css";
 
 export function Home() {
-  // TODO: fazer as funções dos butoes de contact me e de download cv
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
@@ -61,8 +62,30 @@ export function Home() {
           </a>
         </div>
         <div className="home-buttons-container">
-          <Button label="Contact me" />
-          <Button variant="secondary" label="Download CV" />
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="active"
+          >
+            <Button
+              label="Contact me"
+              style={{
+                minWidth: "7rem",
+              }}
+            />
+          </Link>
+          <a
+            href={cv}
+            download
+            style={{
+              all: "unset",
+              minWidth: "7rem",
+            }}
+          >
+            <Button variant="secondary" label="Download CV" />
+          </a>
         </div>
         <div className="home-accomplishment-container">
           <div>
