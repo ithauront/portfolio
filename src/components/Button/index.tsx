@@ -1,11 +1,11 @@
+import type { ButtonHTMLAttributes } from "react";
 import "./styles.css";
 
-type Props = {
+type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
   variant?: "primary" | "secondary";
 };
-
-export function Button({ label, variant = "primary" }: Props) {
+export function Button({ label, variant = "primary", ...rest }: Props) {
   return (
     <button
       className={
@@ -13,6 +13,7 @@ export function Button({ label, variant = "primary" }: Props) {
           ? "button-container-primary"
           : "button-container-secondary"
       }
+      {...rest}
     >
       <p
         className={
