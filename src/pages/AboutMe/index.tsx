@@ -3,7 +3,6 @@ import { TechIconsBar } from "../../components/TechIconsBar";
 import "./styles.css";
 
 export function AboutMe() {
-  //TODO: ver o styles para que o aboutme apareça todo em uma tela e a techicons bar não fique escondida apenas para ver na rolagem.
   return (
     <section id="aboutMe" className="aboutme-container">
       <h2 className="aboutme-title">About me</h2>
