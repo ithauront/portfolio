@@ -1,8 +1,9 @@
 import { useState } from "react";
 
 import { projects, type Project } from "./utils";
+import { AnimatedProjectCard } from "../../components/AnimatedProjectCard";
 import { Button } from "../../components/Button";
-import { ProjectCard } from "../../components/ProjectCard";
+
 import "./styles.css";
 
 const STACK_OPTIONS = ["Front-end", "Back-end", "Full-stack", "Mobile"];
@@ -10,6 +11,7 @@ const IgniteCallId = 16;
 
 export function Portfolio() {
   //TODO: colocar animação de entrada para os projectCards
+  //TODO verificar se o ignite call no learn more explica que tem que usar o test user.
   const [selectedStacks, setSelectedStacks] = useState<string[]>([]);
 
   function handleStackFilter(stack: string) {
@@ -59,42 +61,11 @@ export function Portfolio() {
           </p>
         ) : (
           filteredProjects.map((item) => (
-            <div className="portfolioPage-cardContainer" key={item.id}>
-              <div className="portfolioPage-cardContainer_titleBox">
-                <p className="portfolioPage-cardContainer_name">{item.name}</p>
-                <p className="portfolioPage-cardContainer_category">
-                  {item.category}
-                </p>
-              </div>
-              <ProjectCard
-                projectName={item.name}
-                imgSrc={item.image}
-                githubLink={item.githubLink}
-                liveLink={item.liveLink}
-                githubLink2={item.githubLinkBackEnd}
-                id={item.id}
-              />
-              <p className="portfolioPage-cardContainer_description">
-                {item.id === IgniteCallId ? (
-                  <>
-                    This project allows users to authenticate via Google, see
-                    their calendar availability, and receive new meeting
-                    invitations.
-                    <span
-                      style={{
-                        color: "#AB222E",
-                      }}
-                    >
-                      {" "}
-                      To login in this app you have to use the test user (click
-                      in learn more)
-                    </span>
-                  </>
-                ) : (
-                  item.description
-                )}
-              </p>
-            </div>
+            <AnimatedProjectCard
+              key={item.id}
+              project={item}
+              highlightWarning={item.id === IgniteCallId}
+            />
           ))
         )}
       </div>

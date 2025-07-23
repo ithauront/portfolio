@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 
-import cv from "../../../public/cv/Iuri_Thauront- Développeur Web.pdf";
 import Photo from "../../assets/facePhoto.png";
 import Github from "../../assets/icons8-github-96.png";
 import Linkedin from "../../assets/icons8-linkedin-50.png";
@@ -77,7 +76,7 @@ export function Home() {
             />
           </Link>
           <a
-            href={cv}
+            href="/portfolio/cv/Iuri_Thauront- Développeur Web.pdf"
             download
             style={{
               all: "unset",

@@ -81,7 +81,33 @@
     font-weight: 700;
 }
 
-.home-glass-button {
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contact-glass-button {
     all: unset;
     display: flex;
     align-items: center;
@@ -96,7 +122,18 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
+    opacity: 0;
 }
+
+
+.animate-in .contact-glass-button.github {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.animate-in .contact-glass-button.linkedin {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
 
 .home-glass-button:hover {
     transform: scale(1.05);

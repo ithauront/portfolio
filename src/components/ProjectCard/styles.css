@@ -21,6 +21,7 @@
 }
 
 .projectCard-buttonContainer {
+    all: unset;
     position: absolute;
     bottom: 3.5rem;
     left: 50%;

@@ -47,37 +47,3 @@
     justify-content: center;
     gap: 2rem;
 }
-
-.portfolioPage-cardContainer_titleBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0.5rem;
-}
-
-.portfolioPage-cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 25rem;
-    gap: 0.5rem
-}
-
-.portfolioPage-cardContainer_category {
-    color: var(--gray-400);
-    font-family: var(--font-secondary);
-}
-
-.portfolioPage-cardContainer_name {
-    color: var(--green-500);
-    font-family: var(--font-primary);
-    font-weight: 600;
-}
-
-.portfolioPage-cardContainer_description {
-    color: var(--gray-600);
-    font-family: var(--font-primary);
-    font-weight: 600;
-}

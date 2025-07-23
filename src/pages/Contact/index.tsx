@@ -1,11 +1,27 @@
-import cv from "../../../public/cv/Iuri_Thauront- Développeur Web.pdf";
+import { useEffect, useState } from "react";
+
+import { useInView } from "react-intersection-observer";
+
 import Github from "../../assets/icons8-github-96.png";
 import Linkedin from "../../assets/icons8-linkedin-50.png";
 import { Button } from "../../components/Button";
-import "./styles.css";
 
+import "./styles.css";
 export function Contact() {
-  //TODO: colocar animação para os glassbutons dar slide
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+
+  const [animationClass, setAnimationClass] = useState("");
+
+  useEffect(() => {
+    if (inView) {
+      setAnimationClass("animate-in");
+    } else {
+      setAnimationClass("");
+    }
+  }, [inView]);
+
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText("iurithauront@gmail.com")
@@ -33,19 +49,21 @@ export function Contact() {
     <section id="contact" className="contactPage-container">
       <h2 className="contactPage-title">Contact</h2>
       <div className="contactPage-contactBox">
-        <a
-          className="home-glass-button"
-          href="https://github.com/ithauront"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={Github}
-            alt="GitHub logo – Iuri Thauront's profile"
-            width={50}
-            height={50}
-          />
-        </a>
+        <div ref={ref} className={`glassButon-container ${animationClass}`}>
+          <a
+            className="contact-glass-button github"
+            href="https://github.com/ithauront"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Github}
+              alt="GitHub logo – Iuri Thauront's profile"
+              width={50}
+              height={50}
+            />
+          </a>
+        </div>
         <div className="contactPage-email-container">
           <p className="contactPage-emailAddress">iurithauront@gmail.com</p>
           <div
@@ -70,22 +88,24 @@ export function Contact() {
             <Button label="Send" onClick={handleMailSend} />
           </div>
         </div>
-        <a
-          className="home-glass-button"
-          href="https://www.linkedin.com/in/iuri-bastos-do-reis/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={Linkedin}
-            alt="LinkedIn logo – Iuri Thauront's profile"
-            width={60}
-            height={60}
-          />
-        </a>
+        <div ref={ref} className={`glassButon-container ${animationClass}`}>
+          <a
+            className="contact-glass-button linkedin"
+            href="https://www.linkedin.com/in/iuri-bastos-do-reis/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Linkedin}
+              alt="LinkedIn logo – Iuri Thauront's profile"
+              width={60}
+              height={60}
+            />
+          </a>
+        </div>
       </div>
       <a
-        href={cv}
+        href="/portfolio/cv/Iuri_Thauront- Développeur Web.pdf"
         download
         style={{
           all: "unset",
