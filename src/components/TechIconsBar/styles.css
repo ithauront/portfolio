@@ -3,6 +3,9 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    max-width: 80vw;
+    overflow: scroll;
 }
 
 .tech-icons-container {

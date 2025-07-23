@@ -1,10 +1,10 @@
 import { useParams, useLocation } from "react-router-dom";
 
 import { Button } from "../../components/Button";
+import { igniteCallId } from "../../utils/consts";
 import { projects, type Project } from "../Portfolio/utils";
-import "./styles.css";
 
-const igniteCallId = 16;
+import "./styles.css";
 
 export function ProjectDetails() {
   const { id } = useParams();

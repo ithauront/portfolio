@@ -3,11 +3,9 @@ import { useState } from "react";
 import { projects, type Project } from "./utils";
 import { AnimatedProjectCard } from "../../components/AnimatedProjectCard";
 import { Button } from "../../components/Button";
+import { igniteCallId, STACK_OPTIONS } from "../../utils/consts";
 
 import "./styles.css";
-
-const STACK_OPTIONS = ["Front-end", "Back-end", "Full-stack", "Mobile"];
-const IgniteCallId = 16;
 
 export function Portfolio() {
   //TODO: colocar animação de entrada para os projectCards
@@ -64,7 +62,7 @@ export function Portfolio() {
             <AnimatedProjectCard
               key={item.id}
               project={item}
-              highlightWarning={item.id === IgniteCallId}
+              highlightWarning={item.id === igniteCallId}
             />
           ))
         )}
