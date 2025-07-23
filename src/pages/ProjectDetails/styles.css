@@ -56,6 +56,14 @@
     text-align: justify;
 }
 
+.projectDetails-igniteCallWarn {
+    color: #AB222E;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+
 .projectDetails-techItem {
     position: relative;
     font-size: 1rem;

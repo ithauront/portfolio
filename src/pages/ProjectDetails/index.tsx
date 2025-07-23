@@ -3,6 +3,9 @@ import { useParams, useLocation } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { projects, type Project } from "../Portfolio/utils";
 import "./styles.css";
+
+const igniteCallId = 16;
+
 export function ProjectDetails() {
   const { id } = useParams();
   const location = useLocation();
@@ -44,13 +47,30 @@ export function ProjectDetails() {
             gap: "1.5rem",
             padding: "1rem",
             flex: 1,
+            maxHeight: "80vh",
+            overflowY: "auto",
           }}
         >
           <div>
             <h3 className="projectDetails-asideSessionTitle">About</h3>
-            <p className="projectDetails-about">
-              {project.detailedDescription}
-            </p>
+            {project.id !== igniteCallId ? (
+              <p className="projectDetails-about">
+                {project.detailedDescription}
+              </p>
+            ) : (
+              <p className="projectDetails-about">
+                A fullstack scheduling application built with Next.js, designed
+                to simplify appointment scheduling by integrating seamlessly
+                with Google Calendar.
+                <span className="projectDetails-igniteCallWarn">
+                  {" "}
+                  The app is published on Google Cloud in test mode. Only users
+                  added to the OAuth test list can authenticate unless using the
+                  test account: Email: testignitecalltest@gmail.com Password:
+                  testignite12call3
+                </span>
+              </p>
+            )}
           </div>
 
           <div

@@ -555,7 +555,7 @@ export const projects: Project[] = [
     description:
       "This project allows users to authenticate via Google, see their calendar availability, and receive new meeting invitations. To login in this app you have to use the test user (click in learn more)",
     detailedDescription:
-      "A fullstack scheduling application built with Next.js, designed to simplify appointment scheduling by integrating seamlessly with Google Calendar. This project allows users to authenticate via Google, see their calendar availability, and receive new meeting invitations, while preventing double-bookings and past-dated appointments.",
+      "A fullstack scheduling application built with Next.js, designed to simplify appointment scheduling by integrating seamlessly with Google Calendar. The app is published on Google Cloud in test mode. Only users added to the OAuth test list can authenticate unless using the test account: Email: testignitecalltest@gmail.com Password: testignite12call3",
     techs: [
       "Next.js",
       "TypeScript",
