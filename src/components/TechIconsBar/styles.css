@@ -24,3 +24,11 @@
     height: 45px;
     width: 45px;
 }
+
+@media (max-width: 768px) {
+
+    .tech-icons-bar {
+        display: none;
+    }
+
+}

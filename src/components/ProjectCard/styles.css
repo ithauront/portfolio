@@ -75,3 +75,12 @@
     border-radius: 0.5rem;
 
 }
+
+@media (max-width: 768px) {
+    .projectCard-container {
+
+        height: 250px;
+        width: 280px;
+    }
+
+}

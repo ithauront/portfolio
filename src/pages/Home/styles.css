@@ -190,3 +190,28 @@
     animation-delay: 0s, 1s;
     opacity: 0;
 }
+
+@media (max-width: 768px) {
+
+    .home-container {
+        flex-direction: column;
+
+        min-height: fit-content;
+        justify-content: flex-start;
+        padding-bottom: 5rem;
+    }
+
+    .home-presentation {
+        padding-left: 0;
+        height: auto;
+    }
+
+    .home-accomplishment-container {
+        flex-direction: column;
+
+    }
+
+    .home-photo-container {
+        display: none;
+    }
+}

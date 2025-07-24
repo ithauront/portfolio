@@ -36,9 +36,7 @@ export function ProjectDetails() {
         <img
           src={project.image}
           alt={project.name}
-          style={{
-            width: "75%",
-          }}
+          className="projectDetails-image"
         />
         <div
           style={{
@@ -127,45 +125,19 @@ export function ProjectDetails() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          padding: "2rem 4rem",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <div
-          style={{
-            width: "7rem",
-            height: "2rem",
-          }}
-        >
+      <div className="projectDetails-navbuttons_container">
+        <div className="projectDetails-backButton">
           <Button onClick={() => window.history.back()} label="Back" />
         </div>
-        <div
-          style={{
-            display: "flex",
-            gap: "8rem",
-            height: "2rem",
-          }}
-        >
-          <div
-            style={{
-              width: "7rem",
-            }}
-          >
+        <div className="projectDetails-externalButtons_container">
+          <div className="projectDetails-externalButtons-button">
             <Button
               label="Github"
               variant="secondary"
               onClick={() => openLink(project.githubLink)}
             />
           </div>
-          <div
-            style={{
-              width: "7rem",
-            }}
-          >
+          <div className="projectDetails-externalButtons-button">
             <Button
               label={project.githubLinkBackEnd ? "Github Backend" : "Live Demo"}
               onClick={() =>

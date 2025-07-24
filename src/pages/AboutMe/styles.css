@@ -30,17 +30,14 @@
 }
 
 .aboutme-name {
-
     color: var(--gray-400);
     font-size: 1.5rem;
     font-family: var(--font-primary);
     font-weight: 600;
-
 }
 
 .aboutme-text-container {
     max-width: 55rem;
-
 }
 
 .aboutme-text {
@@ -59,4 +56,16 @@
     font-weight: 600;
     text-align: justify;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .aboutme-main {
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+
+    .aboutme-text-container {
+        min-width: 310px;
+        max-width: 310px;
+    }
 }

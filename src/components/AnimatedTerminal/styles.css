@@ -113,3 +113,18 @@
 .terminal-nextstep-line {
     color: #ffbd2e;
 }
+
+
+@media (max-width: 768px) {
+    .terminal {
+        min-width: 300px;
+        max-width: 300px;
+        height: 280px;
+        animation: none
+    }
+
+    .terminal-header-title {
+        margin-left: 0;
+    }
+
+}
