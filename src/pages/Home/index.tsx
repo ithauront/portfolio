@@ -29,7 +29,7 @@ export function Home() {
       <div className="home-presentation">
         <div className="home-name-box">
           <p className="home-greeting">Hi, I am</p>
-          <p className="home-name">Iuri Thauront Reis</p>
+          <p className="home-name">Iuri Thauront</p>
         </div>
         <h2 className="home-fullstack">Full Stack Developer</h2>
         <div className="home-socials">
