@@ -8,12 +8,15 @@ import Forum from "../../assets/forum.png";
 import GithubBlog from "../../assets/githubBlog.png";
 import Gym from "../../assets/gym.png";
 import IgniteCall from "../../assets/igniteCall.png";
+import IgniteTeams from "../../assets/igniteTeams.png";
+import Imhere from "../../assets/imHere.png";
 import PetFinder from "../../assets/petFinder.png";
 import Pizzashop from "../../assets/pizzashop-api.png";
 import ShopIgnite from "../../assets/shop-ignite.png";
 import SocialFeed from "../../assets/social-feed.png";
 import Timer from "../../assets/timer.png";
 import ToDoList from "../../assets/todolist.png";
+import ToDoListRN from "../../assets/todolistRN.png";
 import Transaction from "../../assets/transactionApp.png";
 import Water from "../../assets/water.png";
 
@@ -620,6 +623,84 @@ export const projects: Project[] = [
       "Building reusable UI components with Stitches",
       "Handling form logic and validation cleanly with React Hook Form + Zod",
       "Secure cookie management for server-side authentication with Nookies",
+    ],
+  },
+  {
+    id: 19,
+    image: Imhere,
+    name: "I'm Here",
+    category: "Mobile",
+    githubLink: "https://github.com/ithauront/imhere",
+    description:
+      "imhere is a simple mobile app built with React Native and Expo to check-in event participants.",
+    detailedDescription:
+      "imhere is a simple mobile app built with React Native and Expo to check-in event participants. This project was created as an introduction to React Native and mobile development. It helped me explore core concepts such as: Running apps on Android emulators and physical devices via Expo Go, understanding the structure and fundamentals of React Native components, using state, lists, user input, and alerts, learning how to handle layouts with StyleSheet and flexbox on React Native",
+    techs: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "React Hooks",
+      "Expo CLI",
+      "Expo Go",
+      "Android Emulator",
+    ],
+    learned: [
+      "How to create and style components in React Native",
+      "How to manage state and list rendering with FlatList",
+      "How to handle user input via TextInput",
+      "How to show alerts using the native Alert API",
+      "How to test the app using Expo Go and Android emulators",
+    ],
+  },
+  {
+    id: 20,
+    image: IgniteTeams,
+    name: "Ignite Teams",
+    category: "Mobile",
+    githubLink: "https://github.com/ithauront/igniteteams",
+    description:
+      "This is a simple and well-structured React Native application for managing teams and their members.",
+    detailedDescription:
+      "This is a simple and well-structured React Native application for managing teams and their members. The goal of the project was to continue learning React Native while integrating concepts such as navigation, storage, component reuse, and safe area handling.",
+    techs: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Styled-Components",
+      "React Navigation",
+      "React Native Safe Area Context",
+      "AsyncStorage",
+      "Phosphor React Native Icons",
+      "Babel Module Resolver",
+    ],
+    learned: [
+      "Structuring React Native apps with screens and components",
+      "Using AsyncStorage for saving local data",
+      "Implementing a domain-like architecture for storage",
+      "Managing navigation between screens with parameters",
+      "Creating and applying custom themes with styled-components",
+      "Organizing styles and applying spacing, typography, and colors consistently",
+      "Managing focus and keyboard behavior with useRef and TextInput",
+    ],
+  },
+  {
+    id: 21,
+    image: ToDoListRN,
+    name: "To Do List Mobile",
+    category: "Mobile",
+    githubLink: "https://github.com/ithauront/to-do-list-react-native",
+    description:
+      "This is a simple mobile to-do list app built with React Native and Expo.",
+    detailedDescription:
+      "This is a simple mobile to-do list app built with React Native and Expo. Users can add, mark as completed, and delete tasks. It also tracks how many tasks were created and completed. In this portfolio you can find a 'twin' web version of this project.",
+    techs: ["React Native", "Expo", "TypeScript", "React Native StyleSheet"],
+    learned: [
+      "Set up and run a React Native app using Expo",
+      "Use the Expo Go app to test directly on a physical device",
+      "Emulate an Android device using Android Studio",
+      "Create components using React Native primitives like View, Text, FlatList, and TouchableOpacity",
+      "Manage component state and arrays with useState",
+      "Style mobile components using StyleSheet API",
     ],
   },
 ];

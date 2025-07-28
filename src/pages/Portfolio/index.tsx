@@ -55,7 +55,7 @@ export function Portfolio() {
               marginTop: "2rem",
             }}
           >
-            Mobile comming soon.
+            Please select a tech stack
           </p>
         ) : (
           filteredProjects.map((item) => (
