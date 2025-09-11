@@ -8,6 +8,7 @@ import Forum from "../../assets/forum.png";
 import GithubBlog from "../../assets/githubBlog.png";
 import Gym from "../../assets/gym.png";
 import IgniteCall from "../../assets/igniteCall.png";
+import IgniteGymMobile from "../../assets/igniteGym.png";
 import IgniteTeams from "../../assets/igniteTeams.png";
 import Imhere from "../../assets/imHere.png";
 import PetFinder from "../../assets/petFinder.png";
@@ -35,6 +36,8 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  //FRONTEND
+
   {
     id: 7,
     image: ShopIgnite,
@@ -286,6 +289,9 @@ export const projects: Project[] = [
       "Handling build and release pipelines with Changesets",
     ],
   },
+
+  //BACKEND
+
   {
     id: 15,
     image: FastFeet,
@@ -496,6 +502,9 @@ export const projects: Project[] = [
       "Planning and separating functional requirements vs. business rules",
     ],
   },
+
+  // FULL-STACK
+
   {
     id: 18,
     image: Pizzashop,
@@ -625,6 +634,9 @@ export const projects: Project[] = [
       "Secure cookie management for server-side authentication with Nookies",
     ],
   },
+
+  // MOBILE
+
   {
     id: 19,
     image: Imhere,
@@ -701,6 +713,45 @@ export const projects: Project[] = [
       "Create components using React Native primitives like View, Text, FlatList, and TouchableOpacity",
       "Manage component state and arrays with useState",
       "Style mobile components using StyleSheet API",
+    ],
+  },
+  {
+    id: 22,
+    image: IgniteGymMobile,
+    name: "Mobile Gym",
+    category: "Mobile",
+    githubLink: "https://github.com/ithauront/ignitegym",
+    githubLinkBackEnd: "https://github.com/orodrigogo/ignitegym-api",
+    description:
+      "A mobile fitness training application built with React Native and Expo.",
+    detailedDescription:
+      "This project serves as the native client for an existing backend (not mine): https://github.com/orodrigogo/ignitegym-api . This app also integrates push notifications via OneSignal and exposes native ios and android folders for use with the Development Build workflow.",
+    techs: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "React Navigation",
+      "React Hook Form ",
+      "Yup",
+      "Axios",
+      "AsyncStorage",
+      "Day.js",
+      "OneSignal",
+      "Gluestack UI",
+      "expo-image-picker",
+      "expo-file-system",
+    ],
+    learned: [
+      "Complete authentication flow",
+      "Token refresh",
+      "Managing user data in AsyncStorage",
+      "Handling API errors with custom error classes",
+      "Context providers for authentication and global state",
+      "Handling push notifications and user tagging with OneSignal",
+      "Using React Navigation with both stack and tab navigators",
+      "Development Build workflow",
+      "Integrating forms using React Hook Form and Yup",
+      "Integrating a React Native application with a real backend",
     ],
   },
 ];
