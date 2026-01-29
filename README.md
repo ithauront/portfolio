@@ -11,7 +11,7 @@ It was built to showcase my journey in programming, highlight some of my most re
 
 The website uses smooth scrolling to navigate between sections, creating a fluid and engaging user experience.
 
-### ✅ Link to LinkedIn and GitHub
+### ✅ Links to LinkedIn and GitHub
 
 Interactive buttons that redirect to my professional profiles.
 
