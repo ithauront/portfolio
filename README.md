@@ -11,7 +11,7 @@ It was built to showcase my journey in programming, highlight some of my most re
 
 The website uses smooth scrolling to navigate between sections, creating a fluid and engaging user experience.
 
-### ✅ Links to LinkedIn and GitHub
+### ✅ Link to LinkedIn and GitHub
 
 Interactive buttons that redirect to my professional profiles.
 
@@ -21,7 +21,7 @@ My resume is available for download directly on the homepage.
 
 ### ✅ Project filtering by tech stack
 
-Projects can be filtered by category such as *Frontend*, *Backend*, and more.
+Projects can be filtered by category such as _Frontend_, _Backend_, and more.
 
 ### ✅ Individual project pages
 
@@ -50,29 +50,29 @@ If you do, I’d really appreciate one of the following:
 
 Your support helps keep projects like this open and inspiring to others. Thank you!
 
-
 ## 💻 Getting started
 
-* Clone the repository:
+- Clone the repository:
 
 ```bash
 git clone https://github.com/ithauront/portfolio.git
 cd portfolio
- ```
+```
 
-* Install dependencies:
+- Install dependencies:
 
 ```bash
 npm install
 ```
 
-* Run server:
+- Run server:
 
 ```bash
 npm run dev
 ```
 
-* The project will run in:
+- The project will run in:
+
 ```bash
 http://localhost:5173
 ```
@@ -81,4 +81,3 @@ http://localhost:5173
 
 The project is hosted via Github Pages:
 [Portfolio](https://ithauront.github.io/portfolio/)
-
